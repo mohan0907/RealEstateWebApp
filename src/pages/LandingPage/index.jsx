@@ -1,14 +1,16 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 import { useNavigate } from "react-router-dom";
 
-import { Button, CheckBox, Img, Input, List, Slider, Text } from "components";
+import { Button, CheckBox, Img, Input, List, Slider, Text, LanguageChange } from "components";
 import LandingPageCard from "components/LandingPageCard";
 import LandingPageFooter from "components/LandingPageFooter";
 import LandingPageHeader from "components/LandingPageHeader";
 
 const LandingPagePage = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const landingPageCardPropList = [
     {},
@@ -35,9 +37,7 @@ const LandingPagePage = () => {
                     size="txtManropeExtraBold46"
                   >
                     <>
-                      Find a perfect property
-                      <br />
-                      Where you&#39;ll love to live
+                      {t('welcomeMessage')}
                     </>
                   </Text>
                   <Text

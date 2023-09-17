@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Button, Img, List, Text } from "components";
 
@@ -33,7 +34,7 @@ const Header = (props) => {
                   className="text-base text-gray-900 w-auto"
                   size="txtManropeSemiBold16"
                 >
-                  Home
+                  <Link to='/about'>Home</Link>
                 </Text>
                 <Img
                   className="h-4 w-4"
